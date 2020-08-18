@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+body{
+  background: url('bga.png') no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Trade Winds', cursive;
+}
+h3{
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.container{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.grid{
+  margin: 50px 0 0 110px;
+  width: 400px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  border: 1px solid silver;
+ 
+}
+.side{
+  display: flex;
+  flex-direction: column;
+}
+.grid div{
+  height: 40px;
+  width: 40px;
+}
+.tetromino{
+  background-color:none;
+}
+.test{
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+}
+#start-button{
+  justify-content: center;
+  background: transparent;
+  border: 1px solid silver;
+  width: 120px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+}
+#start-button:hover{
+  background: #fff;
+  color: #333;
+}
+.mini-grid {
+  margin-left: 70px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+.mini-grid div {
+  height: 20px;
+  width: 20px;
+}
+/*Media*/
+@media(max-width: 1100px){
+
+}
