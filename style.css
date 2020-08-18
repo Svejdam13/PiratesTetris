@@ -83,17 +83,6 @@ h3{
   }
  .grid{
   margin: 30px 0 0 50px;
-  width: 300px;
-  height: 600px;
-}
-.grid div{
-  height: 30px;
-  width: 30px;
-}
-
-}
-@media(max-width: 1200px){
- .grid{
   width: 200px;
   height: 400px;
 }
