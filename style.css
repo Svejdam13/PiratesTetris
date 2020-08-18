@@ -72,6 +72,26 @@ h3{
   width: 20px;
 }
 /*Media*/
+@media(max-width: 1366px){
+  h3{
+    font-size: 1rem;
+  }
+  #start-button{
+    width: 80px;
+    padding: 8px;
+    font-size: 10px;
+  }
+ .grid{
+  margin: 30px 0 0 50px;
+  width: 300px;
+  height: 600px;
+}
+.grid div{
+  height: 30px;
+  width: 30px;
+}
+
+}
 @media(max-width: 1200px){
  .grid{
   width: 200px;
