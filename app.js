@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () =>{
   function draw() {
     current.forEach(index => {
       squares[currentPosition + index].classList.add('tetromino')
-      squares[currentPosition + index].style.backgroundImage = colors[random] //
+      squares[currentPosition + index].style.backgroundImage = colors[random] 
     });
   }
  
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () =>{
  function undraw(){
    current.forEach(index => {
      squares[currentPosition + index].classList.remove('tetromino')
-     squares[currentPosition + index].style.backgroundImage = ''//
+     squares[currentPosition + index].style.backgroundImage = 'none'
    });
  }
 
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () =>{
      moveDown();
    }
  }
- document.addEventListener('keyup', control);
+ document.addEventListener('keydown', control);
 
  //move down function
  function moveDown(){
@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () =>{
  function freeze(){
    if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
      current.forEach(index => squares[currentPosition + index].classList.add('taken'))
+     // A new tetromino falling
      random = nextRandom;
      nextRandom = Math.floor(Math.random() * theTetrominoes.length)
      current = theTetrominoes[random][currentRotation]
@@ -115,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () =>{
      draw();
      displayShape();
      addScore();
-     gameOver()  
+     gameOver();
    }
  }
 
@@ -198,11 +199,11 @@ function displayShape() {
   //remove any trace of a tetromino form the entire grid
   displaySquares.forEach(square => {
     square.classList.remove('tetromino')
-    square.style.backgroundImage = ''; //
+    square.style.backgroundImage = 'none'; 
   })
   upNextTetrominoes[nextRandom].forEach(index =>{
     displaySquares[displayIndex + index].classList.add('tetromino')
-    displaySquares[displayIndex + index].style.backgroundImage = colors[nextRandom] //
+    displaySquares[displayIndex + index].style.backgroundImage = colors[nextRandom];
   })
 }
 
@@ -229,7 +230,7 @@ startBtn.addEventListener('click', () => {
       row.forEach(index => {
         squares[index].classList.remove('taken')
         squares[index].classList.remove('tetromino')
-        squares[index].style.backgroundImage = ''//
+        squares[index].style.backgroundImage = 'none'
       })
       const squaresRemoved = squares.splice(i, width)
       squares = squaresRemoved.concat(squares)
