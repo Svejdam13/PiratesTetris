@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+html {
+  margin: 0;
+}
 body{
-  background: url('bga.png') no-repeat;
+  background: url('bg_black.png') no-repeat;
   background-size: cover;
   color: #fff;
   font-family: 'Trade Winds', cursive;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 h3{
   text-align: center;
@@ -11,26 +17,29 @@ h3{
   letter-spacing: 2px;
 }
 .container{
+  box-sizing: border-box;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px;
 }
 .grid{
-  margin: 50px 0 0 110px;
-  width: 400px;
-  height: 800px;
+  width: 20vw;
+  height: 40vw;
   display: flex;
   flex-wrap: wrap;
   border-radius: 5px;
   border: 1px solid silver;
- 
+
 }
 .side{
   display: flex;
   flex-direction: column;
 }
 .grid div{
-  height: 40px;
-  width: 40px;
+  height: 2vw;
+  width: 2vw;
 }
 .tetromino{
   background-color:none;
@@ -60,34 +69,32 @@ h3{
 }
 .mini-grid {
   margin-left: 70px;
-  width: 80px;
-  height: 80px;
+  min-width: 80px;
+  width: 4vw;
+  min-height: 80px;
+  height: 4vw;
   display: flex;
   flex-wrap: wrap;
   border-radius: 5px;
 }
 
 .mini-grid div {
-  height: 20px;
-  width: 20px;
+  min-height: 20px;
+  height: 1vw;
+  min-width: 20px;
+  width: 1vw;
 }
-/*Media*/
-@media(max-width: 1366px){
-  h3{
-    font-size: 1rem;
+
+.skull-img {
+  margin: 30px 0;
+  width: 55%;
+  min-width: 300px;
+  height: auto;
+}
+
+/* Media */
+@media screen and (min-width: 1025px) {
+  .container {
+    height: 100%;
   }
-  #start-button{
-    width: 80px;
-    padding: 8px;
-    font-size: 10px;
-  }
- .grid{
-  margin: 30px 0 0 50px;
-  width: 200px;
-  height: 400px;
-}
-.grid div{
-  height: 20px;
-  width: 20px;
-}
 }
